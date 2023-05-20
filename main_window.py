@@ -1,6 +1,6 @@
-from typing import Optional
-import PySide6.QtCore
 from PySide6.QtWidgets import QMainWindow, QVBoxLayout, QWidget
+
+
 
 class MainWindow(QMainWindow):
     def __init__(self, parent: QWidget | None = None, *args, **kwargs) -> None:
@@ -15,9 +15,13 @@ class MainWindow(QMainWindow):
         # Título da janela
         self.setWindowTitle('Calculadora')
 
+        
 
     def adjustFixedSize(self):
         # Ajustar por último
         self.adjustSize()
         self.setFixedSize(self.width(), self.height()) # Setando um tamanho fixo
         
+
+    def addWidgetToVLayout(self, widget: QWidget):
+        self.v_layout.addWidget(widget)
