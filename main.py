@@ -4,6 +4,7 @@ from main_window import MainWindow
 from constant import WINDOWS_ICON_PATH
 from PySide6.QtGui import QIcon
 from display import Display
+from info import Info
 
 
 if __name__ == '__main__':
@@ -16,6 +17,10 @@ if __name__ == '__main__':
     icon = QIcon(str(WINDOWS_ICON_PATH))
     window.setWindowIcon(icon)
     app.setWindowIcon(icon)
+
+    # Info
+    info = Info('2.0 ^ 10.0 = 1024')
+    window.addToVLayout(info)
 
     # Display
     display = Display()
